@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import Background from '../Img/home-background.jpg'
+import Logo from '../Img/logo.jpg'
 import styled from 'styled-components'
 
 import HomePage from '../Home';
@@ -33,12 +34,9 @@ const Style= styled.div`
         color: red
     }
     .NavLogo{
-        font-size: 40px
-        background-color: rgb(0,0,255)
     }
     .Navcolor{
-        font-size: 20px
-        background-color: rgb(0,144,255)
+        background-color: rgb(0,0,255)
     }
 `;
 
@@ -53,7 +51,11 @@ const Landing = () => (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-            <NavDropdown title="Logo" id="basic-nav-dropdown" className="NavLogo">
+            <NavDropdown id="basic-nav-dropdown" title={
+                <div className="NavLogo">
+                    <img src={Logo}></img>
+                </div>
+            }>
             <div className="Navcolor">
                 <NavDropdown.Item href="#action/3.1">Ẩm thực</NavDropdown.Item>
                 <NavDropdown.Divider  />
