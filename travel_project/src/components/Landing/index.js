@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button'
 import Background from '../Img/home-background.jpg'
 import Logo from '../Img/logo.jpg'
 import styled from 'styled-components'
+import Blink from 'react-blink-text';
 
 import HomePage from '../Home';
 import * as ROUTES from '../../constants/routes';
@@ -38,6 +39,9 @@ const Style= styled.div`
     .Navcolor{
         background-color: rgb(0,0,255)
     }
+    .Blink-text{
+        text-align: center;
+    }
 `;
 
 const Landing = () => (
@@ -53,7 +57,8 @@ const Landing = () => (
             <Nav className="mr-auto">
             <NavDropdown id="basic-nav-dropdown" title={
                 <div className="NavLogo">
-                    <img src={Logo}></img>
+                    <img src={Logo} alt="Your travel" />
+                    
                 </div>
             }>
             <div className="Navcolor">
@@ -73,9 +78,18 @@ const Landing = () => (
             </Form>
             </Navbar.Collapse>
             </Navbar>
-        </div>
-        </div>
 
+            <div  className="Blink-text" >
+            <Blink color='#01FF70' text="𝓨𝓞𝓤𝓡 𝓣𝓡𝓐𝓥𝓔𝓛"  >
+                <h1></h1>
+            </Blink>
+            <Blink color='#01FF70' text='𝕸𝖆𝖐𝖊 𝖞𝖔𝖚𝖗 𝖒𝖊𝖒𝖔𝖗𝖞 𝖋𝖔𝖗𝖊𝖛𝖊𝖗'>
+                <h3></h3>
+            </Blink>
+            </div>
+        </div>
+        </div>
+        
     </Style>
     </div>
 );
