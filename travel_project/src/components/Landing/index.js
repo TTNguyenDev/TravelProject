@@ -64,16 +64,16 @@ const Landing = () => (
             </Navbar>
 
             <div  className="Blink-text" >
-            <Blink color='#FF851B' text="𝓨𝓞𝓤𝓡 𝓣𝓡𝓐𝓥𝓔𝓛"  >
+            <Blink color='#FF851B' text="Your travel"  >
                     <h2></h2>
             </Blink>
-            <Blink color='#FF851B' text='Make your memory forever' >
+            <Blink color='white' text='Make your memory forever' >
             </Blink>
             </div>
         </div>
         </div>
     </Style>
-    
+
     </div>
 );
 
