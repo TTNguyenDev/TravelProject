@@ -2,11 +2,11 @@ import React from 'react';
 
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import Background from '../Img/home-background.jpg'
+import Black_Background from "../Img/black-background.jpg"
 import Logo from '../Img/logo.jpg'
 import styled from 'styled-components'
 
@@ -31,6 +31,18 @@ const Style= styled.div`
         position: relative;
     }
 
+    .Imgbackground1{
+        background-image: url(${Black_Background});  
+        width: 100%;
+        height:100vh;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        /* Needed to position the navbar */
+        position: relative;
+    }
 `;
 
 
@@ -75,7 +87,8 @@ const Home = () => (
       <div className="Imgbackground">
       </div>
       
-      <div className="Imgbackground">
+      <div className="Imgbackground1">
+     
       </div>
 
   </Style>
