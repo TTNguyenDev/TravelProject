@@ -30,12 +30,6 @@ const Style= styled.div`
         /* Needed to position the navbar */
         position: relative;
     }
-    .Homebuttondesign{
-        color: red
-    }
-    .Navlinkdesign{
-        
-    }
 
 `;
 
@@ -44,41 +38,43 @@ const Home = () => (
   <div>
     
   <Style>
-      
-      <div className="Sumary">
-          <Navbar justify expand="lg" bg="light" sticky-top>
-          <Navbar.Brand href={ROUTES.HOME} component={HomePage} className="Homebuttondesign"><h1>Trang chủ</h1></Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-          <Nav variant="tabs" className="mr-auto">
-          <Nav.Item>
-                <NavLink><h1>Ẩm thực</h1></NavLink>
-          </Nav.Item>
-          <Nav.Item>
-                <NavLink><h1>Du lịch</h1></NavLink>
-          </Nav.Item>
-          <Nav.Item>
-                <NavLink><h1>Khuyến mãi</h1></NavLink>
-          </Nav.Item>
-          <Nav.Item>
-                <NavLink><h1>Tin Tức</h1></NavLink>.
-          </Nav.Item>
-          <Nav.Link eventKey="disabled" disabled> 
-                <div >
-                    <img src={Logo} alt="Your travel" />
-                </div>
-            </Nav.Link>
-          </Nav>
-          <Nav.Item>
-                <NavLink>Đăng nhập</NavLink>
-          </Nav.Item>
-          <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-success">Search</Button>
-          </Form>
-          </Navbar.Collapse>
-          </Navbar>
+        <Navbar justify expand="lg" bg="light" sticky="top" >
+        <Navbar.Collapse id="basic-navbar-nav" >
+        <Nav variant="tabs" className="mr-auto">
+        <Nav.Item>
+            <NavLink href={ROUTES.HOME} component={HomePage}><h2 text-colo='red'>Trang chủ</h2></NavLink>
+        </Nav.Item>
+        <Nav.Item>
+            <NavLink><h2>Ẩm thực</h2></NavLink>
+        </Nav.Item>
+        <Nav.Item>
+            <NavLink><h2>Du lịch</h2></NavLink>
+        </Nav.Item>
+        <Nav.Item>
+            <NavLink><h2>Khuyến mãi</h2></NavLink>
+        </Nav.Item>
+        <Nav.Item>
+            <NavLink><h2>Tin Tức</h2></NavLink>.
+        </Nav.Item>
+        <Nav.Link eventKey="disabled" disabled> 
+            <div >
+                <img src={Logo} alt="Your travel" />
+            </div>
+        </Nav.Link>
+        </Nav>
+        <Nav.Item>
+            <NavLink>Đăng nhập</NavLink>
+        </Nav.Item>
+        <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+        </Form>
+        </Navbar.Collapse>
+        </Navbar>
+     
+      <div className="Imgbackground">
       </div>
+      
       <div className="Imgbackground">
       </div>
 
