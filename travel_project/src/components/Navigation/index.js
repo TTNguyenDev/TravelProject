@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
-import SignOut from '../SignOut';
+// import SignOut from '../SignOut';
 import { AuthUserContext } from '../Session';
 
 const Navigation = () => (
