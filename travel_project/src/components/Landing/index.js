@@ -3,12 +3,12 @@ import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
-
+import { AuthUserContext } from '../Session'
 
 class Landing extends React.Component {
   constructor() {
     super();
-    this.state = { liveinVietNam: false, gowith: [], terrian: [], activities: [], knowdestination: [], visitdestination: [], recommended: false , checkagree: false};
+    this.state = { liveinVietNam: false, gowith: [], terrian: [], activities: [], knowdestination: [], visitdestination: [], recommended: false, checkagree: false };
     this.liveinVN = this.liveinVN.bind(this);
     this.notinVN = this.notinVN.bind(this);
     this.gowith = this.gowith.bind(this);
@@ -18,7 +18,7 @@ class Landing extends React.Component {
     this.visitdes = this.visitdes.bind(this);
     this.recommend = this.recommend.bind(this);
     this.notrecommend = this.notrecommend.bind(this);
-    this.checkagree=this.checkagree.bind(this);
+    this.checkagree = this.checkagree.bind(this);
     this.submit = this.submit.bind(this);
   }
   render() {
@@ -138,7 +138,7 @@ class Landing extends React.Component {
             <Button type="button" onClick={this.submit}>OK</Button>
           </Col>
         </Form.Group>
-       
+
       </Form>
 
     );
@@ -180,43 +180,57 @@ class Landing extends React.Component {
     this.setState({ recommended: false });
   }
 
-  checkagree(evt){
-    this.setState({checkagree: evt.target.checked});
+  checkagree(evt) {
+    this.setState({ checkagree: evt.target.checked });
   }
+
+//   const Navigation = () => (
+//     <div>
+//         <AuthUserContext.Consumer>
+//             {authUser => authUser ? <NavigationAuth/> : <NavigationNonAuth/>}
+//         </AuthUserContext.Consumer>
+//     </div>
+// )
+
 
   submit() {
-    if (this.state.checkagree==false){
+    if (!AuthUserContext.Consumer.authUser) {
+      alert("Please login to use this feature!");
+      return;
+    }
+
+    if (this.state.checkagree == false) {
       alert("Please check the agree box");
     }
-    else
-    {
-    console.log("Live in Viet Nam ")
-    console.log(this.state.liveinVietNam ? 'Yes' : 'No');
+    else {
+      alert("Your answers is recorded!")
+      console.log("Live in Viet Nam ")
+      console.log(this.state.liveinVietNam ? 'Yes' : 'No');
 
-    console.log("Hay đi du lịch ")
-    for (var i = 0; i < this.state.gowith.length; i++)
-      console.log(this.state.gowith[i]);
+      console.log("Hay đi du lịch ")
+      for (var i = 0; i < this.state.gowith.length; i++)
+        console.log(this.state.gowith[i]);
 
-    console.log("Hay đi du lịch ở những nơi")
-    for (i = 0; i < this.state.terrian.length; i++)
-      console.log(this.state.terrian[i]);
+      console.log("Hay đi du lịch ở những nơi")
+      for (i = 0; i < this.state.terrian.length; i++)
+        console.log(this.state.terrian[i]);
 
-    console.log("Hay làm những hoạt động này khi đi du lịch")
-    for (i = 0; i < this.state.activities.length; i++)
-      console.log(this.state.activities[i]);
+      console.log("Hay làm những hoạt động này khi đi du lịch")
+      for (i = 0; i < this.state.activities.length; i++)
+        console.log(this.state.activities[i]);
 
-    console.log("Những nơi biết tới tại Việt Nam")
-    for (i = 0; i < this.state.knowdestination.length; i++)
-      console.log(this.state.knowdestination[i]);
+      console.log("Những nơi biết tới tại Việt Nam")
+      for (i = 0; i < this.state.knowdestination.length; i++)
+        console.log(this.state.knowdestination[i]);
 
-    console.log("Những nơi đã du lịch tại Việt Nam")
-    for (i = 0; i < this.state.visitdestination.length; i++)
-      console.log(this.state.visitdestination[i]);
+      console.log("Những nơi đã du lịch tại Việt Nam")
+      for (i = 0; i < this.state.visitdestination.length; i++)
+        console.log(this.state.visitdestination[i]);
 
-    console.log("Allow Recommended Place")
-    console.log(this.state.recommended ? 'Yes' : 'No');
+      console.log("Allow Recommended Place")
+      console.log(this.state.recommended ? 'Yes' : 'No');
+    }
   }
-}
 }
 
 export default Landing;
