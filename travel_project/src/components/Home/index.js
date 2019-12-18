@@ -45,7 +45,6 @@ const Style= styled.div`
     }
 `;
 
-
 const Home = () => (
   <div>
     

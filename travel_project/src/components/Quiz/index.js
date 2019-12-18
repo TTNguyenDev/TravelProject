@@ -233,4 +233,4 @@ class Quiz extends React.Component {
   }
 }
 
-export default Landing;
+export default Quiz;
