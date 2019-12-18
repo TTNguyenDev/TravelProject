@@ -11,7 +11,6 @@ import Black_Background from "../Img/black-background.jpg"
 import Logo from '../Img/logo.jpg'
 import styled from 'styled-components'
 
-
 import HomePage from '../Home';
 import * as ROUTES from '../../constants/routes';
 import NavLink from 'react-bootstrap/NavLink';
@@ -97,7 +96,7 @@ const Home = () => (
   </div>
 );
 
-const condition = authUser => !!authUser;
-
-export default withAuthorization(condition)(HomePage);
+// const condition = authUser => !!authUser;
+// export default withAuthorization(condition)(HomePage);
+export default Home;
  
