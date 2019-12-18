@@ -30,6 +30,7 @@ const App = () => (
                         <Route path={ROUTES.ADMIN} component={AdminPage} />
                     </div>
                 </Router>
+
 );
            
 export default withAuthentication(App);
