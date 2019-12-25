@@ -22,7 +22,6 @@ const Navigation = () => (
 
 const NavigationAuth = () => (
     <div>
-
         <Navbar justify expand="lg" bg="light" sticky="top" >
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav variant="tabs" className="mr-auto">

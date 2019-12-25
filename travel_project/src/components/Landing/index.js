@@ -16,7 +16,7 @@ import * as ROUTES from '../../constants/routes';
 
 
 
-const Style= styled.div`
+const Style = styled.div`
     .Sumary{
     }
     .Imgbackground{
@@ -37,43 +37,44 @@ const Style= styled.div`
     .Blink-text{
         text-align: center;
     }
+
 `;
 
 const Landing = () => (
     <div>
-    
-    <Style>
-        <div className="Imgbackground">
-        <div className="Sumary">
-            <Navbar expand="lg">
-            <Navbar.Brand href={ROUTES.HOME} component={HomePage} className="Homebuttondesign"><h2>Trang chủ</h2></Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-            <Nav.Link> 
-                <div className="NavLogo">
-                    <img src={Logo} alt="Your travel" />
+
+        <Style>
+                <div className="Imgbackground">
+                {/* <div className="ReactModal"> */}
+                    <div className="Sumary">
+                        <Navbar expand="lg">
+                            <Navbar.Brand href={ROUTES.HOME} component={HomePage} className="Homebuttondesign"><h2>Trang chủ</h2></Navbar.Brand>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                            <Navbar.Collapse id="basic-navbar-nav">
+                                <Nav className="mr-auto">
+                                    <Nav.Link>
+                                        <div className="NavLogo">
+                                            <img src={Logo} alt="Your travel" />
+                                        </div>
+                                    </Nav.Link>
+                                </Nav>
+                                <Form inline>
+                                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                                    <Button variant="outline-success">Search</Button>
+                                </Form>
+                            </Navbar.Collapse>
+                        </Navbar>
+
+                        <div className="Blink-text" >
+                            <Blink color='#FF851B' text="Your travel"  >
+                                <h2></h2>
+                            </Blink>
+                            <Blink color='white' text='Make your memory forever' >
+                            </Blink>
+                        </div>
+                    </div>
                 </div>
-            </Nav.Link>
-            </Nav>
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-success">Search</Button>
-            </Form>
-            </Navbar.Collapse>
-            </Navbar>
-
-            <div  className="Blink-text" >
-            <Blink color='#FF851B' text="Your travel"  >
-                    <h2></h2>
-            </Blink>
-            <Blink color='white' text='Make your memory forever' >
-            </Blink>
-            </div>
-        </div>
-        </div>
-    </Style>
-
+        </Style>
     </div>
 );
 
