@@ -66,12 +66,12 @@ const DaLat = () => (
                             </Button>
                         </Col>
                         <Col>
-                            <Button variant="link">
+                            <Button variant="link" href={ROUTES.UPDATELATER}>
                                 <img src={promotionImg} class="resizeImg"></img>
                             </Button>
                         </Col>
                         <Col>
-                            <Button variant="link" >
+                            <Button variant="link" href={ROUTES.DALATVIEWBLOG} >
                                 <img src={experienceImg} class="resizeImg"></img>
                             </Button>
                         </Col>

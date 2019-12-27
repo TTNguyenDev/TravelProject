@@ -68,11 +68,9 @@ class Blog extends React.Component {
                                 <Form.Label>Choose the destination you want to review</Form.Label>
                                 <Form.Control as="select" onChange={this.takeDestinationValue} ref={this.destinationinput} onChange={() => this.takeDestinationValue()}>
                                     <option value={"Vũng Tàu"}>Vũng Tàu</option>
-                                    <option value={"Mũi Né"}>Mũi Né</option>
                                     <option value={"Hà Nội"}>Hà Nội</option>
-                                    <option value={"Sa Pa"}>Sa Pa</option>
-                                    <option value={"Hội An"}>Hội An</option>
-                                    <option value={"Cà Mau"}>Cà Mau</option>
+                                    <option value={"Nha Trang"}>Nha Trang</option>
+                                    <option value={"Đà Lạt"}>Đà Lạt</option>
                                 </Form.Control>
                             </Form.Group>
                         </div>

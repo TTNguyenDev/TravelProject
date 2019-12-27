@@ -12,5 +12,9 @@ export const NHATRANG ='/des/nhatrang';
 export const DALAT ='/des/dalat';
 export const HANOI ='/des/hanoi';
 export const UPDATELATER ='/notfound';
+export const VUNGTAUVIEWBLOG ='/des/vungtaublog';
+export const NHATRANGVIEWBLOG ='/des/nhatrangblog';
+export const DALATVIEWBLOG ='/des/dalatblog';
+export const HANOIVIEWBLOG ='/des/hanoiblog';
 
 

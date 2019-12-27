@@ -19,6 +19,10 @@ import NhaTrangPage from '../Destination/NhaTrang'
 import HaNoiPage from '../Destination/HaNoi'
 import DaLatPage from '../Destination/DaLat'
 import Notfound from '../Updatelater'
+import VungTauPageBlog from '../viewBlog/VungTau'
+import NhaTrangPageBlog from '../viewBlog/NhaTrang'
+import HaNoiPageBlog from '../viewBlog/HaNoi'
+import DaLatPageBlog from '../viewBlog/DaLat'
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
@@ -41,6 +45,10 @@ const App = () => (
             <Route path={ROUTES.HANOI} component={HaNoiPage} />
             <Route path={ROUTES.DALAT} component={DaLatPage} />
             <Route path={ROUTES.UPDATELATER} component={Notfound} />
+            <Route path={ROUTES.VUNGTAUVIEWBLOG} component={VungTauPageBlog} />
+            <Route path={ROUTES.NHATRANGVIEWBLOG} component={NhaTrangPageBlog} />
+            <Route path={ROUTES.HANOIVIEWBLOG} component={HaNoiPageBlog} />
+            <Route path={ROUTES.DALATVIEWBLOG} component={DaLatPageBlog} />
         </div>
     </Router>
 

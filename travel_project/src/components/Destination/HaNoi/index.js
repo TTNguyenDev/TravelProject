@@ -66,12 +66,12 @@ const HaNoi = () => (
                             </Button>
                         </Col>
                         <Col>
-                            <Button variant="link">
+                            <Button variant="link" href={ROUTES.UPDATELATER}>
                                 <img src={promotionImg} class="resizeImg"></img>
                             </Button>
                         </Col>
                         <Col>
-                            <Button variant="link" >
+                            <Button variant="link" href={ROUTES.HANOIVIEWBLOG} >
                                 <img src={experienceImg} class="resizeImg"></img>
                             </Button>
                         </Col>
