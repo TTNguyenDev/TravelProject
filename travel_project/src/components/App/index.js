@@ -13,6 +13,7 @@ import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import QuizPage from '../Quiz';
+import BlogPage from '../Blog';
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
@@ -29,6 +30,7 @@ const App = () => (
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.QUIZ} component={QuizPage} />
+            <Route path={ROUTES.BLOG} component={BlogPage} />
         </div>
     </Router>
 

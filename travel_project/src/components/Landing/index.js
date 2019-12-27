@@ -42,7 +42,6 @@ const Style = styled.div`
 
 const Landing = () => (
     <div>
-
         <Style>
                 <div className="Imgbackground">
                 {/* <div className="ReactModal"> */}
