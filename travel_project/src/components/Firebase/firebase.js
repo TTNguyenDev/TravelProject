@@ -1,5 +1,6 @@
 import app from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/database';
 
 const dev_config = {
     apiKey: "AIzaSyBcAbXks9g56MMbtsEihjtO8fTO6Ce8RtY",
@@ -28,6 +29,7 @@ class Firebase {
     constructor() {
         app.initializeApp(dev_config);
         this.auth = app.auth();
+        this.db = app.database();
     }
 
     // *** Auth API ***
@@ -43,6 +45,10 @@ class Firebase {
 
     doPasswordUpdate = password =>
         this.auth.currentUser.updatePassword(password);
+
+    // ***Blogs API***
+    blog = place => this.db.ref('des/' + place + '/');
+    blogs = place => this.db.ref('des/' + place);
 }
 
 export default Firebase;

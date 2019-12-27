@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -6,6 +6,9 @@ import Button from 'react-bootstrap/Button'
 import { AuthUserContext } from '../Session'
 import styled from 'styled-components'
 import Background from '../Img/home-background.jpg'
+import { withFirebase } from '../Firebase';
+import { compose } from 'recompose';
+
 
 const Style = styled.div`
     .Sumary{
@@ -31,10 +34,16 @@ const Style = styled.div`
 
 `;
 
-class Blog extends React.Component {
-    constructor() {
-        super();
-        this.state = { title: "", content: "", destination: "Vũng Tàu" };
+const INITITAL_STATE = {
+    title: '',
+    content: '',
+    destination: 'vung_tau',
+}
+
+class Blog extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {...INITITAL_STATE};
         this.titleinput = React.createRef()
         this.contentinput = React.createRef()
         this.destinationinput = React.createRef()
@@ -43,6 +52,11 @@ class Blog extends React.Component {
     }
 
     render() {
+        const {
+            title,
+            content,
+            destination,
+        } = this.state;
         return (
             <Style>
                 <div className="Imgbackground">
@@ -67,10 +81,10 @@ class Blog extends React.Component {
                             <Form.Group controlId="Destination" >
                                 <Form.Label>Choose the destination you want to review</Form.Label>
                                 <Form.Control as="select" onChange={this.takeDestinationValue} ref={this.destinationinput} onChange={() => this.takeDestinationValue()}>
-                                    <option value={"Vũng Tàu"}>Vũng Tàu</option>
-                                    <option value={"Hà Nội"}>Hà Nội</option>
-                                    <option value={"Nha Trang"}>Nha Trang</option>
-                                    <option value={"Đà Lạt"}>Đà Lạt</option>
+                                    <option value={"vung_tau"}>Vũng Tàu</option>
+                                    <option value={"ha_noi"}>Hà Nội</option>
+                                    <option value={"nha_trang"}>Nha Trang</option>
+                                    <option value={"da_lat"}>Đà Lạt</option>
                                 </Form.Control>
                             </Form.Group>
                         </div>
@@ -106,17 +120,22 @@ class Blog extends React.Component {
     }
 
 
-    submit() {
+    submit = event => {
+        const { title, content, destination } = this.state;
 
-        console.log("Title: ")
-        console.log(this.state.title)
+        this.props.firebase.blog(destination).push({
+            title: title,
+            content: content,
+        });
 
-        console.log("Content: ")
-        console.log(this.state.content)
+        this.setState({...INITITAL_STATE});
 
-        console.log("Destination: ")
-        console.log(this.state.destination)
-    }
+        event.preventDefault();
+    };
+
+    onChange = event => {
+        this.setState({ [event.target.name]: event.target.value });
+    };
 }
 
-export default Blog;
+export default withFirebase(Blog);
