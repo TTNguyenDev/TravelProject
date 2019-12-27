@@ -7,5 +7,7 @@ export const ADMIN = '/admin';
 export const PASSWORD_FORGET = 'pw-forget';
 export const QUIZ = '/quiz';
 export const BLOG = '/blog';
+export const VUNGTAU ='/des/vungtau';
+export const UPDATELATER ='/notfound';
 
 

@@ -14,6 +14,8 @@ import AccountPage from '../Account';
 import AdminPage from '../Admin';
 import QuizPage from '../Quiz';
 import BlogPage from '../Blog';
+import VungTauPage from '../Destination/VungTau'
+import Notfound from '../Updatelater'
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
@@ -31,6 +33,8 @@ const App = () => (
             <Route path={ROUTES.ADMIN} component={AdminPage} />
             <Route path={ROUTES.QUIZ} component={QuizPage} />
             <Route path={ROUTES.BLOG} component={BlogPage} />
+            <Route path={ROUTES.VUNGTAU} component={VungTauPage} />
+            <Route path={ROUTES.UPDATELATER} component={Notfound} />
         </div>
     </Router>
 
