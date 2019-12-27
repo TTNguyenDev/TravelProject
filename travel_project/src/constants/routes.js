@@ -8,6 +8,9 @@ export const PASSWORD_FORGET = 'pw-forget';
 export const QUIZ = '/quiz';
 export const BLOG = '/blog';
 export const VUNGTAU ='/des/vungtau';
+export const NHATRANG ='/des/nhatrang';
+export const DATLAT ='/des/dalat';
+export const HANOI ='/des/hanoi';
 export const UPDATELATER ='/notfound';
 
 

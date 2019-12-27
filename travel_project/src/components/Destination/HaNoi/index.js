@@ -2,7 +2,7 @@ import React from 'react';
 import { withAuthorization } from '../../Session';
 
 
-import Background from '../../Img/Destination/NhaTrang.jpg'
+import Background from '../../Img/Destination/HaNoi.jpg'
 import promotionImg from '../../Img/promotion.jpg'
 import experienceImg from '../../Img/experience.jpg'
 import foodanddrink from '../../Img/foodanddrink.jpg'
@@ -50,12 +50,12 @@ const Style = styled.div`
     }
 `;
 
-const NhaTrang = () => (
+const HaNoi = () => (
     <div>
         <Style>
             <div className="Imgbackground">
                 <br></br><br></br><br></br>
-                <center className="Title">Nha Trang</center>
+                <center className="Title">Hà Nội</center>
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <center className="kindoftravel">Thể loại</center>
                 <center>
@@ -83,6 +83,4 @@ const NhaTrang = () => (
     </div>
 );
 
-// const condition = authUser => !!authUser;
-// export default withAuthorization(condition)(HomePage);
-export default NhaTrang;
+export default HaNoi;

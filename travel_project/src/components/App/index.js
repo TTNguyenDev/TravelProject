@@ -15,6 +15,9 @@ import AdminPage from '../Admin';
 import QuizPage from '../Quiz';
 import BlogPage from '../Blog';
 import VungTauPage from '../Destination/VungTau'
+import NhaTrangPage from '../Destination/NhaTrang'
+import HaNoiPage from '../Destination/HaNoi'
+import DaLatPage from '../Destination/DaLat'
 import Notfound from '../Updatelater'
 
 import * as ROUTES from '../../constants/routes';
@@ -34,6 +37,9 @@ const App = () => (
             <Route path={ROUTES.QUIZ} component={QuizPage} />
             <Route path={ROUTES.BLOG} component={BlogPage} />
             <Route path={ROUTES.VUNGTAU} component={VungTauPage} />
+            <Route path={ROUTES.NHATRANG} component={NhaTrangPage} />
+            <Route path={ROUTES.HANOI} component={HaNoiPage} />
+            <Route path={ROUTES.DATLAT} component={DaLatPage} />
             <Route path={ROUTES.UPDATELATER} component={Notfound} />
         </div>
     </Router>
