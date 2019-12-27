@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../Img/logo.jpg'
 import NavLink from 'react-bootstrap/NavLink';
 
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap'
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -24,6 +24,7 @@ const NavigationAuth = () => (
     <div>
         <Navbar justify expand="lg" bg="light" sticky="top" >
             <Navbar.Collapse id="basic-navbar-nav" >
+    
                 <Nav variant="tabs" className="mr-auto">
                     <Nav.Item>
                         <NavLink href={ROUTES.HOME}><h2 text-colo='red'>Trang chủ</h2></NavLink>
@@ -35,11 +36,11 @@ const NavigationAuth = () => (
                         <NavLink><h2>Du lịch</h2></NavLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <NavLink><h2>Khuyến mãi</h2></NavLink>
+                        <NavLink><h2>Tin Tức</h2></NavLink>.
                     </Nav.Item>
                     <Nav.Item>
-                        <NavLink><h2>Tin Tức</h2></NavLink>.
-        </Nav.Item>
+                        <NavLink><h2>Khuyến mãi</h2></NavLink>.
+                    </Nav.Item>
                     <Nav.Link eventKey="disabled" disabled>
                         <div >
                             <img src={Logo} alt="Your travel" />
@@ -57,12 +58,17 @@ const NavigationAuth = () => (
                 </Nav.Item>
 
                 <Nav.Item>
+                    <NavLink href={ROUTES.BLOG}>Up blog</NavLink>
+                </Nav.Item>
+
+                <Nav.Item>
                     <SignOutButton />
                 </Nav.Item>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="ml-5 mr-sm-2" />
                     <Button variant="outline-success">Search</Button>
                 </Form>
+        
             </Navbar.Collapse>
         </Navbar>
     </div>

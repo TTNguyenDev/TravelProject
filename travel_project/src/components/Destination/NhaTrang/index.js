@@ -53,6 +53,7 @@ const Style = styled.div`
 const NhaTrang = () => (
     <div>
         <Style>
+           
             <div className="Imgbackground">
                 <br></br><br></br><br></br>
                 <center className="Title">Nha Trang</center>
@@ -78,6 +79,7 @@ const NhaTrang = () => (
                     </Row>
                 </center>
             </div>
+           
         </Style>
 
     </div>

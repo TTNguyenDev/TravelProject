@@ -39,7 +39,7 @@ const App = () => (
             <Route path={ROUTES.VUNGTAU} component={VungTauPage} />
             <Route path={ROUTES.NHATRANG} component={NhaTrangPage} />
             <Route path={ROUTES.HANOI} component={HaNoiPage} />
-            <Route path={ROUTES.DATLAT} component={DaLatPage} />
+            <Route path={ROUTES.DALAT} component={DaLatPage} />
             <Route path={ROUTES.UPDATELATER} component={Notfound} />
         </div>
     </Router>
