@@ -2,7 +2,7 @@ import React from 'react';
 import { withAuthorization } from '../../Session';
 
 
-import Background from '../../Img/Destination/HaNoi.jpg'
+import Background from '../../Img/Destination/HaNoi1.jpg'
 import promotionImg from '../../Img/promotion.jpg'
 import experienceImg from '../../Img/experience.jpg'
 import foodanddrink from '../../Img/foodanddrink.jpg'
