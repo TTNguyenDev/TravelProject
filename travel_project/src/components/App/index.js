@@ -27,6 +27,7 @@ import VungTauPagePromotion from '../Promotion/VungTau'
 import NhaTrangPagePromotion from '../Promotion/NhaTrang'
 import HaNoiPagePromotion from '../Promotion/HaNoi'
 import DaLatPagePromotion from '../Promotion/DaLat'
+import Detail from '../Detail'
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
@@ -57,6 +58,7 @@ const App = () => (
             <Route path={ROUTES.NHATRANGPROMOTION} component={NhaTrangPagePromotion} />
             <Route path={ROUTES.HANOIPROMOTION} component={HaNoiPagePromotion} />
             <Route path={ROUTES.DALATPROMOTION} component={DaLatPagePromotion} />
+            <Route path={ROUTES.DETAIL} component={Detail} />
         </div>
     </Router>
 

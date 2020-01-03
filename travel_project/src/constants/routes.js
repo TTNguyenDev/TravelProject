@@ -20,5 +20,6 @@ export const VUNGTAUPROMOTION ='/des/vungtaupromotion';
 export const NHATRANGPROMOTION ='/des/nhatrangpromotion';
 export const DALATPROMOTION ='/des/dalatblogpromotion';
 export const HANOIPROMOTION ='/des/hanoiblogpromotion';
+export const DETAIL ='/detail';
 
 
