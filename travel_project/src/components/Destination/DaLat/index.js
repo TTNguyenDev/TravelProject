@@ -6,6 +6,7 @@ import Background from '../../Img/Destination/DaLat.jpg'
 import promotionImg from '../../Img/promotion.jpg'
 import experienceImg from '../../Img/experience.jpg'
 import foodanddrink from '../../Img/foodanddrink.jpg'
+import tradition from '../../Img/Tradition.jpg'
 
 import { ButtonToolbar, Button, Row, Col } from 'react-bootstrap'
 
@@ -62,11 +63,16 @@ const DaLat = () => (
                     <Row className="ml-5 mr-5">
                         <Col>
                             <Button variant="link" href={ROUTES.UPDATELATER}>
-                                <img src={foodanddrink} class="resizeImg" ></img>
+                                <img src={tradition} class="resizeImg" ></img>
                             </Button>
                         </Col>
                         <Col>
                             <Button variant="link" href={ROUTES.UPDATELATER}>
+                                <img src={foodanddrink} class="resizeImg" ></img>
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button variant="link" href={ROUTES.DALATPROMOTION}>
                                 <img src={promotionImg} class="resizeImg"></img>
                             </Button>
                         </Col>

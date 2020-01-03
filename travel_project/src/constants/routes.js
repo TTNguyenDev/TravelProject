@@ -16,5 +16,9 @@ export const VUNGTAUVIEWBLOG ='/des/vungtaublog';
 export const NHATRANGVIEWBLOG ='/des/nhatrangblog';
 export const DALATVIEWBLOG ='/des/dalatblog';
 export const HANOIVIEWBLOG ='/des/hanoiblog';
+export const VUNGTAUPROMOTION ='/des/vungtaupromotion';
+export const NHATRANGPROMOTION ='/des/nhatrangpromotion';
+export const DALATPROMOTION ='/des/dalatblogpromotion';
+export const HANOIPROMOTION ='/des/hanoiblogpromotion';
 
 

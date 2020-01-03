@@ -6,6 +6,7 @@ import Background from '../../Img/Destination/NhaTrang.jpg'
 import promotionImg from '../../Img/promotion.jpg'
 import experienceImg from '../../Img/experience.jpg'
 import foodanddrink from '../../Img/foodanddrink.jpg'
+import tradition from '../../Img/Tradition.jpg'
 
 import { ButtonToolbar, Button, Row, Col } from 'react-bootstrap'
 
@@ -61,13 +62,18 @@ const NhaTrang = () => (
                 <center className="kindoftravel">Thể loại</center>
                 <center>
                     <Row className="ml-5 mr-5">
+                    <Col>
+                            <Button variant="link" href={ROUTES.UPDATELATER}>
+                                <img src={tradition} class="resizeImg" ></img>
+                            </Button>
+                        </Col>
                         <Col>
                             <Button variant="link" href={ROUTES.UPDATELATER}>
                                 <img src={foodanddrink} class="resizeImg" ></img>
                             </Button>
                         </Col>
                         <Col>
-                            <Button variant="link" href={ROUTES.UPDATELATER}>
+                            <Button variant="link" href={ROUTES.NHATRANGPROMOTION}>
                                 <img src={promotionImg} class="resizeImg"></img>
                             </Button>
                         </Col>

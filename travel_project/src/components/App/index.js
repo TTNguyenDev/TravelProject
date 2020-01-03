@@ -23,6 +23,10 @@ import VungTauPageBlog from '../viewBlog/VungTau'
 import NhaTrangPageBlog from '../viewBlog/NhaTrang'
 import HaNoiPageBlog from '../viewBlog/HaNoi'
 import DaLatPageBlog from '../viewBlog/DaLat'
+import VungTauPagePromotion from '../Promotion/VungTau'
+import NhaTrangPagePromotion from '../Promotion/NhaTrang'
+import HaNoiPagePromotion from '../Promotion/HaNoi'
+import DaLatPagePromotion from '../Promotion/DaLat'
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
@@ -49,6 +53,10 @@ const App = () => (
             <Route path={ROUTES.NHATRANGVIEWBLOG} component={NhaTrangPageBlog} />
             <Route path={ROUTES.HANOIVIEWBLOG} component={HaNoiPageBlog} />
             <Route path={ROUTES.DALATVIEWBLOG} component={DaLatPageBlog} />
+            <Route path={ROUTES.VUNGTAUPROMOTION} component={VungTauPagePromotion} />
+            <Route path={ROUTES.NHATRANGPROMOTION} component={NhaTrangPagePromotion} />
+            <Route path={ROUTES.HANOIPROMOTION} component={HaNoiPagePromotion} />
+            <Route path={ROUTES.DALATPROMOTION} component={DaLatPagePromotion} />
         </div>
     </Router>
 
