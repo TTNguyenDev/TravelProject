@@ -73,8 +73,6 @@ const Landing = () => (
                         </div>
                     </div>
                 </div>
-                <div className="Imgbackground">
-                </div>
         </Style>
     </div>
 );

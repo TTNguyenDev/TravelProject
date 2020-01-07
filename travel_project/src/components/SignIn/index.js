@@ -1,20 +1,73 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
+import styled from 'styled-components'
+import Background from '../Img/signin-background.jpg'
+import { Form } from 'react-bootstrap';
 
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
 import { withFirebase } from '../Firebase'
 import * as ROUTES from '../../constants/routes';
 
-const SignInPage = () => (
-    <div>
-        <h1>SignIn</h1>
-        <SignInForm/>
-        <PasswordForgetLink/>
-        <SignUpLink/>
-    </div>
-);
+const Style = styled.div`
+    .Imgbackground{
+        background-image: url(${Background});  
+        width: 100%;
+        min-height: 100vh;
+        
+
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        /* Needed to position the navbar */
+        position: relative;
+    }
+    .resizeForm{
+        width: 40%;
+        -webkit-transform: rotate(-5deg); 
+        -moz-transform: rotate(-5deg); 
+    }
+    .resizeInput{
+        -webkit-transform: rotate(+5deg); 
+        -moz-transform: rotate(+5deg); 
+    }
+`;
+
+class SignInPage extends Component {
+    static navigationOptions = {
+        //To hide the NavigationBar from current Screen
+        header: null
+    };
+
+    render() {
+        return (
+            <Style>
+                <div className="Imgbackground">
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <center>
+
+                        <SignInForm />
+
+
+
+                    </center>
+                </div>
+            </Style>
+        );
+    }
+
+}
 
 const INITITAL_STATE = {
     email: '',
@@ -48,34 +101,62 @@ class SignInFormBase extends Component {
         this.setState({ [event.target.name]: event.target.value });
     };
 
+
+
     render() {
         const { email, password, error } = this.state;
 
         const isInvalid = password === '' || email === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
+
+            <form onSubmit={this.onSubmit} className="ml-5 bg-light mr-5 pl-5 pr-5 resizeForm">
+            <div className="resizeInput">
+                <h1><font color='red'>Sign In</font></h1>
+                <br></br>
+                <span>Email address: </span>
                 <input
+                    className="ml-5"
                     name="email"
                     value={email}
                     onChange={this.onChange}
                     type="text"
                     placeholder="Email Address"
                 />
+                <br></br>
+                <br></br>
+                <br></br>
+                <span>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </span>
                 <input
+                    className="ml-5"
                     name="password"
                     value={password}
                     onChange={this.onChange}
                     type="password"
                     placeholder="Password"
                 />
+                <br></br>
+                <div>
+                    <div>
+                        <br></br>
+                        <PasswordForgetLink />
+                    </div>
 
-                <button disabled={isInvalid} type="submit">
-                    SignIn
+                </div>
+
+                <br></br>
+                <button disabled={isInvalid} type="submit" >
+                    Sign In
                 </button>
-
+                <br></br>
+                <br></br>
+                <SignUpLink />
+                <br></br>
+                
                 {error && <p>{error.message}</p>}
+                </div>
             </form>
+
         );
     }
 }
