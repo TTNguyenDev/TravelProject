@@ -28,18 +28,16 @@ import VungTauPagePromotion from '../Promotion/VungTau'
 import NhaTrangPagePromotion from '../Promotion/NhaTrang'
 import HaNoiPagePromotion from '../Promotion/HaNoi'
 import DaLatPagePromotion from '../Promotion/DaLat'
-import DL_Detail from '../Detail/DL_Detail'
-import HN_Detail from '../Detail/HN_Detail'
-import VT_Detail from '../Detail/VT_Detail'
-import NT_Detail from '../Detail/NT_Detail'
+import DL_Detail from '../Details/DL_Detail'
+import HN_Detail from '../Details/HN_Detail'
+import VT_Detail from '../Details/VT_Detail'
+import NT_Detail from '../Details/NT_Detail'
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';
 
 const App = () => (
     <Router>
-      
-           
             <Switch>
             <Route exact path={ROUTES.LANDING} component={LandingPage} />
             <Route path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -67,7 +65,10 @@ const App = () => (
             <Route path={ROUTES.NHATRANGPROMOTION} component={NhaTrangPagePromotion} />
             <Route path={ROUTES.HANOIPROMOTION} component={HaNoiPagePromotion} />
             <Route path={ROUTES.DALATPROMOTION} component={DaLatPagePromotion} />
-            <Route path={ROUTES.DETAIL} component={Detail} />
+            <Route path={ROUTES.NT_DETAIL} component={NT_Detail} />
+            <Route path={ROUTES.VT_DETAIL} component={VT_Detail} />
+            <Route path={ROUTES.DL_DETAIL} component={DL_Detail} />
+            <Route path={ROUTES.HN_DETAIL} component={HN_Detail} />
             </Route>
             </Switch>
        

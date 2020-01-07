@@ -23,7 +23,7 @@ export const HANOIPROMOTION ='/des/hanoiblogpromotion';
 export const DL_DETAIL ='/dl_detail/';
 export const VT_DETAIL ='/vt_detail/';
 export const HN_DETAIL ='/hn_detail/';
-export const nt_DETAIL ='/nt_detail/';
+export const NT_DETAIL ='/nt_detail/';
 
 
 
