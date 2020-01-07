@@ -2,14 +2,10 @@ import React, { Component } from 'react';
 import { withAuthorization } from '../../Session';
 
 import { withFirebase } from '../../Firebase';
-import Black_Background from "../../Img/black-background.jpg"
-import HaNoi from '../../Img/Destination/HaNoi.jpg'
-import NhaTrang from '../../Img/Destination/NhaTrang.jpg'
-import DaLat from '../../Img/Destination/DaLat.jpg'
-import VungTau from '../../Img/Destination/VungTau.jpg'
+import Background from "../../Img/Destination/DetailHaNoi.jpg"
 import styled from 'styled-components'
 
-import { Carousel, Button } from 'react-bootstrap'
+import { Form, Row, Col } from 'react-bootstrap'
 import * as ROUTES from '../../../constants/routes';
 
 
@@ -17,9 +13,9 @@ const Style = styled.div`
     .Sumary{
     }
     .Imgbackground{
-        background-image: url(${Black_Background});  
+        background-image: url(${Background});  
         width: 100%;
-        height:100vh;
+        min-height: 100vh;
 
         background-position: center;
         background-repeat: no-repeat;
@@ -28,13 +24,36 @@ const Style = styled.div`
         /* Needed to position the navbar */
         position: relative;
     }
+    .ResizeForm{
+        width:50%;
+        -webkit-transform: rotate(+5deg); 
+        -moz-transform: rotate(+5deg); 
+        border-radius: 56px;
+    }
+    .resizeInput{
+        -webkit-transform: rotate(-5deg); 
+        -moz-transform: rotate(-5deg); 
+    }
+    .ResizeTitle{
+        font-size: 50px;
+    }
+    .ResizeContent{
+        font-size: 30px;
+    }
+    .Title{
+        color: red;
+        text-decoration: underline;
+        text-decoration-color: red;
+        font-size : 75px;
+        font-weight:bold;
+    }
 `;
 
 class DL_Detail extends React.Component {
     constructor(props) {
         super(props);
         var ids = this.props.location.pathname.split('/');
-        this.id = ids[ids.length-1];
+        this.id = ids[ids.length - 1];
         this.state = {
             loading: false,
             title: '',
@@ -51,7 +70,7 @@ class DL_Detail extends React.Component {
                 title: value.title,
                 content: value.content
             })
-        })  
+        })
     }
 
     componentWillUnmount() {
@@ -60,11 +79,44 @@ class DL_Detail extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Title: {this.state.title}</h1>
-                <h2>Blog Id:{this.id}</h2>
-                <h3>Content: {this.state.content}</h3>
+            <Style>
+            <div className="Imgbackground">
+                <br></br>
+                <center className="Title">Đà Lạt</center>
+                <br></br>
+                <center><h1><font color='yellow'>Detail blog</font></h1></center>
+
+                <br></br>
+                <br></br>
+                <br></br>
+                <center>
+                    <Form className="ml-5 bg-light mr-5 pl-5 pr-5 ResizeForm" >
+                        <br></br>
+                        <br></br>
+                        <div className="resizeInput">
+                            <Row className="ResizeTitle">
+                                <Col>
+                                    <font color='red'>{this.state.title}</font>
+                                </Col>
+                            </Row>
+                            <br></br>
+
+                            <br></br>
+                            <Row className="ResizeContent">
+
+                                <Col>
+                                    {this.state.content}
+                                </Col>
+                            </Row>
+                            <br></br>
+                            <br></br>
+
+
+                        </div>
+                    </Form>
+                </center>
             </div>
+        </Style>
         );
     }
 }
