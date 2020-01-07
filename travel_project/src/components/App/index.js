@@ -28,7 +28,10 @@ import VungTauPagePromotion from '../Promotion/VungTau'
 import NhaTrangPagePromotion from '../Promotion/NhaTrang'
 import HaNoiPagePromotion from '../Promotion/HaNoi'
 import DaLatPagePromotion from '../Promotion/DaLat'
-import Detail from '../Detail'
+import DL_Detail from '../Detail/DL_Detail'
+import HN_Detail from '../Detail/HN_Detail'
+import VT_Detail from '../Detail/VT_Detail'
+import NT_Detail from '../Detail/NT_Detail'
 
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session';

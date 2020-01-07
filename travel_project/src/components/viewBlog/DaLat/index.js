@@ -119,7 +119,7 @@ const BlogItem = ({blog}) => (
         <Style>
             <Row className="ml-5 mr-5 bg-light resizeRow">
 
-                <Button variant="link" href={ROUTES.DETAIL}>
+                <Button variant="link" href={ROUTES.DL_DETAIL+ blog.uid}>
                     <img src={dalat1} class="resizeImg" ></img>
                 </Button>
 

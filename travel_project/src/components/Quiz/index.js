@@ -22,12 +22,12 @@ class Quiz extends React.Component {
     this.submit = this.submit.bind(this);
   }
   render() {
-    if (!AuthUserContext.Consumer.authUser) {
-      alert("Please login to use this feature!")
-      return (
-        <div></div>
-      )
-    }
+    // if (!AuthUserContext.Consumer.authUser) {
+    //   alert("Please login to use this feature!")
+    //   return (
+    //     <div></div>
+    //   )
+    // }
 
     return (
       <Form className="ml-5">

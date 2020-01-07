@@ -20,6 +20,10 @@ export const VUNGTAUPROMOTION ='/des/vungtaupromotion';
 export const NHATRANGPROMOTION ='/des/nhatrangpromotion';
 export const DALATPROMOTION ='/des/dalatblogpromotion';
 export const HANOIPROMOTION ='/des/hanoiblogpromotion';
-export const DETAIL ='/detail';
+export const DL_DETAIL ='/dl_detail/';
+export const VT_DETAIL ='/vt_detail/';
+export const HN_DETAIL ='/hn_detail/';
+export const nt_DETAIL ='/nt_detail/';
+
 
 

@@ -49,6 +49,10 @@ class Firebase {
     // ***Blogs API***
     blog = place => this.db.ref('des/' + place + '/');
     blogs = place => this.db.ref('des/' + place);
+
+
+    // ***Passing Data***
+    selectedID = itemid => this.db.ref('selectedID/' + itemid);
 }
 
 export default Firebase;
