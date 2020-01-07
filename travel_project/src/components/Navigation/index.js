@@ -29,7 +29,7 @@ const NavigationAuth = () => (
                         <NavLink href={ROUTES.HOME}><h2><font color='red'>Home</font></h2></NavLink>
                     </Nav.Item>
                     <Nav.Item>
-                        <NavLink><h2>Food and drink</h2></NavLink>
+                        <NavLink><h2>Cuisine</h2></NavLink>
                     </Nav.Item>
                     <Nav.Item>
                         <NavLink><h2>Destination</h2></NavLink>
@@ -80,7 +80,7 @@ const NavigationNonAuth = () => (
                     <NavLink href={ROUTES.HOME}><font color='red'><h2>Home</h2></font></NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <NavLink><h2>Food and drink</h2></NavLink>
+                    <NavLink><h2>Cuisine</h2></NavLink>
                 </Nav.Item>
                 <Nav.Item>
                     <NavLink><h2>Destination</h2></NavLink>

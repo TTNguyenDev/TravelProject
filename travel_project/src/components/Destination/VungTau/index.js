@@ -2,7 +2,7 @@ import React from 'react';
 import { withAuthorization } from '../../Session';
 
 
-import Background from '../../Img/Destination/VungTauBlog.jpg'
+import Background from '../../Img/VungTau.jpg'
 import promotionImg from '../../Img/promotion.jpg'
 import experienceImg from '../../Img/experience.jpg'
 import foodanddrink from '../../Img/foodanddrink.jpg'

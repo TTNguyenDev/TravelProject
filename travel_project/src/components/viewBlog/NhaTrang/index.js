@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { compose } from 'recompose';
 import { withFirebase } from '../../Firebase';
 import { withAuthorization } from '../../Session';
-import Background from '../../Img/Destination/NhaTrang.jpg'
+import Background from '../../Img/Destination/NhaTrangListBlog.jpg'
 import { ButtonToolbar, Button, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import nhatrang1 from '../../Img/destination-promotion/nhatrang1.jpg'

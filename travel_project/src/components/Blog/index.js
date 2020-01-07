@@ -123,13 +123,19 @@ class Blog extends Component {
     submit = event => {
         const { title, content, destination } = this.state;
 
-        this.props.firebase.blog(destination).push({
-            title: title,
-            content: content,
-        });
-
-        this.setState({...INITITAL_STATE});
-
+        if ((title!=="") || (content!==""))
+        {
+            alert("Up blog successfully");
+            this.props.firebase.blog(destination).push({
+                title: title,
+                content: content,
+            });
+    
+            this.setState({...INITITAL_STATE});
+        }
+        else{
+            alert("Please fill in the blank then press ok");
+        }
         event.preventDefault();
     };
 
