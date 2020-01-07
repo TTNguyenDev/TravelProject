@@ -35,15 +35,16 @@ import { withAuthentication } from '../Session';
 
 const App = () => (
     <Router>
-        <div>
+      
            
             <Switch>
             <Route exact path={ROUTES.LANDING} component={LandingPage} />
             <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+            <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
            
             <Route>
             <Navigation/>
-            <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+            
             <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
             <Route path={ROUTES.HOME} component={HomePage} />
             <Route path={ROUTES.ACCOUNT} component={AccountPage} />
@@ -66,7 +67,7 @@ const App = () => (
             <Route path={ROUTES.DETAIL} component={Detail} />
             </Route>
             </Switch>
-        </div>
+       
     </Router>
 
 );

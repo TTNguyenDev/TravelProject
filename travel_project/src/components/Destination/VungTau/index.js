@@ -2,7 +2,7 @@ import React from 'react';
 import { withAuthorization } from '../../Session';
 
 
-import Background from '../../Img/Destination/VungTau.jpg'
+import Background from '../../Img/Destination/VungTauBlog.jpg'
 import promotionImg from '../../Img/promotion.jpg'
 import experienceImg from '../../Img/experience.jpg'
 import foodanddrink from '../../Img/foodanddrink.jpg'
@@ -57,8 +57,9 @@ const VungTau = () => (
             <div className="Imgbackground">
                 <br></br><br></br><br></br>
                 <center className="Title">VŨNG TÀU</center>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                <center className="kindoftravel">Thể loại</center>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <center className="kindoftravel">Category</center>
+                <br></br><br></br><br></br>
                 <center>
                     <Row className="ml-5 mr-5">
                     <Col>

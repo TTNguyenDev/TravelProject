@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { compose } from 'recompose';
 import { withFirebase } from '../../Firebase';
 import { withAuthorization } from '../../Session';
-import Background from '../../Img/Destination/DaLat.jpg'
+import Background from '../../Img/Destination/DaLatBlog.jpg'
 import { Button, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import dalat1 from '../../Img/destination-promotion/dalat1.jpg'

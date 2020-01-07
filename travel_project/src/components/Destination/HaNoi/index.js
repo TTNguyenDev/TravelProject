@@ -57,8 +57,9 @@ const HaNoi = () => (
             <div className="Imgbackground">
                 <br></br><br></br><br></br>
                 <center className="Title">Hà Nội</center>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                <center className="kindoftravel">Thể loại</center>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <center className="kindoftravel">Category</center>
+                <br></br><br></br><br></br>
                 <center>
                     <Row className="ml-5 mr-5">
                     <Col>

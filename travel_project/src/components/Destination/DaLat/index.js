@@ -56,9 +56,10 @@ const DaLat = () => (
         <Style>
             <div className="Imgbackground">
                 <br></br><br></br><br></br>
-                <center className="Title">Đà lạt</center>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                <center className="kindoftravel">Thể loại</center>
+                <center className="Title">Đà Lạt</center>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <center className="kindoftravel">Category</center>
+                <br></br><br></br><br></br>
                 <center>
                     <Row className="ml-5 mr-5">
                         <Col>

@@ -5,7 +5,7 @@ import { withAuthorization } from '../Session';
 import Black_Background from "../Img/black-background.jpg"
 import HaNoi from '../Img/Destination/HaNoi.jpg'
 import NhaTrang from '../Img/Destination/NhaTrang.jpg'
-import DaLat from '../Img/Destination/DaLat.jpg'
+import DaLat from '../Img/Destination/DaLatList.jpg'
 import VungTau from '../Img/Destination/VungTau.jpg'
 import styled from 'styled-components'
 
@@ -38,8 +38,8 @@ const Style = styled.div`
         font-weight:bold;
     }
     .resizeImg{
-        width: 80vh;
-        height: 50vh;
+        width: 90vh;
+        height: 55vh;
     }
 `;
 
@@ -54,7 +54,7 @@ class Home extends React.Component {
                     <div className="Imgbackground">
                         <br></br><br></br><br></br>
                         <center className="Title">Highlighted Places</center>
-
+                        <br></br><br></br><br></br>
 
                         <Carousel>
                             <Carousel.Item>

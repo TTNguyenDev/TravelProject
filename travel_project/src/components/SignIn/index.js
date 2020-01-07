@@ -3,7 +3,8 @@ import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import styled from 'styled-components'
 import Background from '../Img/signin-background.jpg'
-import { Form } from 'react-bootstrap';
+import Logo from '../Img/logo.jpg'
+import { Nav } from 'react-bootstrap'
 
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../PasswordForget';
@@ -25,9 +26,10 @@ const Style = styled.div`
         position: relative;
     }
     .resizeForm{
-        width: 40%;
+        width: 35%;
         -webkit-transform: rotate(-5deg); 
         -moz-transform: rotate(-5deg); 
+        border-radius: 56px;
     }
     .resizeInput{
         -webkit-transform: rotate(+5deg); 
@@ -36,11 +38,6 @@ const Style = styled.div`
 `;
 
 class SignInPage extends Component {
-    static navigationOptions = {
-        //To hide the NavigationBar from current Screen
-        header: null
-    };
-
     render() {
         return (
             <Style>
@@ -56,11 +53,7 @@ class SignInPage extends Component {
                     <br></br>
                     <br></br>
                     <center>
-
                         <SignInForm />
-
-
-
                     </center>
                 </div>
             </Style>
@@ -111,49 +104,56 @@ class SignInFormBase extends Component {
         return (
 
             <form onSubmit={this.onSubmit} className="ml-5 bg-light mr-5 pl-5 pr-5 resizeForm">
-            <div className="resizeInput">
-                <h1><font color='red'>Sign In</font></h1>
-                <br></br>
-                <span>Email address: </span>
-                <input
-                    className="ml-5"
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <br></br>
-                <br></br>
-                <br></br>
-                <span>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </span>
-                <input
-                    className="ml-5"
-                    name="password"
-                    value={password}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <br></br>
-                <div>
+                <div className="resizeInput">
+                    <br></br>
+                    <Nav.Link eventKey="disabled" disabled>
+                        <div >
+                            <img src={Logo} alt="Your travel" />
+                        </div>
+                    </Nav.Link>
+                    <br></br>
+                    <h1><font color='red'>SIGN IN</font></h1>
+                    <br></br>
+                    <span>Email address: </span>
+                    <input
+                        className="ml-5"
+                        name="email"
+                        value={email}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Email Address"
+                    />
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <span>Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </span>
+                    <input
+                        className="ml-5"
+                        name="password"
+                        value={password}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <br></br>
                     <div>
-                        <br></br>
-                        <PasswordForgetLink />
+                        <div>
+                            <br></br>
+                            <PasswordForgetLink />
+                        </div>
+
                     </div>
 
-                </div>
-
-                <br></br>
-                <button disabled={isInvalid} type="submit" >
-                    Sign In
+                    <br></br>
+                    <button disabled={isInvalid} type="submit" >
+                        Sign In
                 </button>
-                <br></br>
-                <br></br>
-                <SignUpLink />
-                <br></br>
-                
-                {error && <p>{error.message}</p>}
+                    <br></br>
+                    <br></br>
+                    <SignUpLink />
+                    <br></br>
+
+                    {error && <p>{error.message}</p>}
                 </div>
             </form>
 
