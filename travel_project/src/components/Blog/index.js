@@ -129,6 +129,7 @@ class Blog extends Component {
             this.props.firebase.blog(destination).push({
                 title: title,
                 content: content,
+                likes: 0
             });
     
             this.setState({...INITITAL_STATE});

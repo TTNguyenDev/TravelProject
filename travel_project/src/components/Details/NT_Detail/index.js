@@ -7,7 +7,7 @@ import styled from 'styled-components'
 
 import { Form, Row, Col } from 'react-bootstrap'
 import * as ROUTES from '../../../constants/routes';
-
+import { Button } from 'react-bootstrap'
 
 const Style = styled.div`
     .Sumary{
@@ -57,8 +57,10 @@ class NT_Detail extends React.Component {
         this.state = {
             loading: false,
             title: '',
-            content: ''
+            content: '',
+            likes: 0
         };
+        this.hanldeLikes = this.hanldeLikes.bind(this);
     }
 
     componentDidMount() {
@@ -68,7 +70,8 @@ class NT_Detail extends React.Component {
             this.setState({
                 loading: false,
                 title: value.title,
-                content: value.content
+                content: value.content,
+                likes: value.likes
             })
         })  
     }
@@ -77,12 +80,20 @@ class NT_Detail extends React.Component {
         this.props.firebase.blogs().off();
     }
 
+    hanldeLikes() {
+        this.state.likes += 1;
+        this.props.firebase.blogs('da_lat').child(this.id).update({
+            'likes': this.state.likes
+        })
+    }
+
     render() {
         return (
             <Style>
             <div className="Imgbackground">
                 <br></br>
                 <center className="Title">Nha Trang</center>
+                <Button type="button" onClick={this.hanldeLikes}>Likes</Button>
                 <br></br>
                 <center><h1><font color='yellow'>Detail blog</font></h1></center>
 

@@ -121,6 +121,7 @@ const BlogItem = ({ blog }) => (
         <Row className="ml-5 mr-5 bg-light resizeRow">
                 <Button variant="link" href={ROUTES.NT_DETAIL + blog.uid}>
                     <img src={nhatrang1} class="resizeImg" ></img>
+                    <h3>{blog.likes} lượt yêu thích</h3>
                 </Button>
 
             <Col className='Detail'>

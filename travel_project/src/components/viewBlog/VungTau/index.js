@@ -122,6 +122,7 @@ const BlogItem = ({blog}) => (
 
             <Button variant="link" href={ROUTES.VT_DETAIL + blog.uid}>
                 <img src={vungtau1} class="resizeImg" ></img>
+                <h3>{blog.likes} lượt yêu thích</h3>
             </Button>
 
             <Col className="mt-4">
