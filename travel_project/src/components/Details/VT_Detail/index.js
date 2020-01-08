@@ -82,8 +82,13 @@ class VT_Detail extends React.Component {
     }
 
     hanldeLikes() {
-        this.state.likes += 1;
-        this.props.firebase.blogs('da_lat').child(this.id).update({
+        this.state.likes +=1;
+        this.setState({
+            loading: false,
+            likes: this.state.likes
+        })
+        
+        this.props.firebase.blogs('vung_tau').child(this.id).update({
             'likes': this.state.likes
         })
     }
@@ -94,7 +99,7 @@ class VT_Detail extends React.Component {
             <div className="Imgbackground">
                 <br></br>
                 <center className="Title">Vũng Tàu</center>
-                <Button type="button" onClick={this.hanldeLikes}>Likes</Button>
+                <Button type="button" onClick={this.hanldeLikes}>{this.state.likes} Likes</Button>
                 <br></br>
                 <center><h1><font color='yellow'>Detail blog</font></h1></center>
 
