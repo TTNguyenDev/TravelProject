@@ -126,7 +126,7 @@ const BlogItem = ({ blog }) => (
 
             <Col className='Detail'>
                 <h2>{blog.title}</h2>
-                <p>{blog.content}</p>
+                <p>{blog.content.substr(0, 200)}...</p>
             </Col>
         </Row>
         <br></br>

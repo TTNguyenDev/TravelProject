@@ -26,13 +26,9 @@ const Style = styled.div`
     }
     .ResizeForm{
         width:50%;
-        -webkit-transform: rotate(+5deg); 
-        -moz-transform: rotate(+5deg); 
         border-radius: 56px;
     }
-    .resizeInput{
-        -webkit-transform: rotate(-5deg); 
-        -moz-transform: rotate(-5deg); 
+    .resizeInput{ 
     }
     .ResizeTitle{
         font-size: 50px;
